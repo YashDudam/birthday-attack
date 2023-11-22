@@ -22,8 +22,6 @@ def main():
         print(err)
         exit(1)
 
-
-
     real_hashes = {}
     fake_hashes = {}
 
@@ -39,6 +37,7 @@ def main():
 
         collision = find_collisions(real_hashes, fake_hashes)
 
+    print("hash found:", collision)
     real_altered = real_hashes[collision]
     fake_altered = fake_hashes[collision]
 
